@@ -20,6 +20,7 @@ users = [
 
 # premiere route
 @app.route('/')  # decorateur
+@app.route('/home')
 def index():
 
     # dans data, on stocke notre variable et title de meme
@@ -32,7 +33,6 @@ def index():
 @app.route('/contact')  # dans la console avec /contact on accede a cette page
 def contact():
     return 'Page contact'  # on affiche "page contact"
-
 
 @app.route('/best')  # dans la console avec /contact on accede a cette page
 def best():

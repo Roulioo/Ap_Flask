@@ -5,7 +5,7 @@
     <title> 
         {% block title %}{% endblock %} - Flaskr 
     </title>
-    
+
     <h1>SALUT JULIO</h1> 
 
 {% endblock %}
@@ -14,12 +14,10 @@
 
     <ul>
         {% for user in data %}
-        <li> Name : {{user['name']}} , Moyenne : {{average(user['notes'])}} </li> 
+            <li> Name : {{user['name']}} , Moyenne : {{average(user['notes'])}} </li> 
         {% endfor %}
     </ul>
 
-    <nav>
-        <h1>Flaskr</h1><ul></ul>
-    </nav>
+    <!-- <a class = "lien" href = "best"> ALLER SUR LA PAGE BEST JOUEUR </a> -->
 
 {% endblock %}

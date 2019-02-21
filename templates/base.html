@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 
-<html>
+    <html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Page Title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    </head>
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Page Title</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        </head>
 
-    <!-- -->
-
-    <body class="{% block classname %}home{% endblock %}">
-    
-    <header>
-        {% block header %}
-            <!-- -->
-        {% endblock %}
-    </header>
-
-    {% block content %}
         <!-- -->
-    {% endblock %}
 
-    </body>
-    
-</html>
+        <body class="{% block classname %}home{% endblock %}">
+        
+            <nav>
+                <h1>Flaskr</h1>
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/best">best</a></li>
+                </ul>
+            </nav>
+
+            <header>
+                {% block header %}
+                    <!---->
+                {% endblock %}
+            </header>
+
+            {% block content %}
+                <!---->
+            {% endblock %}
+
+        </body>
+        
+    </html>
