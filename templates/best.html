@@ -1,0 +1,11 @@
+{% extends 'base.html' %} <!-- on importe la page base.html -->
+
+{% block classname %}best__student{% endblock %}
+
+{% block header %} 
+    <h1>LE MEILLEUR DE LA CLASSE</h1> 
+{% endblock %}
+
+{% block content %}
+    <p> {{maximum(data)}} </p>
+{% endblock %}

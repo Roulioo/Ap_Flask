@@ -1,23 +1,25 @@
-<!DOCTYPE html>
+{% extends 'base.html' %} <!-- on importe la page base.html -->
 
-    <html>
+{% block header %} 
 
-        <head>
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <title>Page Title</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-        </head>
+    <title> 
+        {% block title %}{% endblock %} - Flaskr 
+    </title>
+    
+    <h1>SALUT JULIO</h1> 
 
-        <body>
-            <h1>{{title}}</h1>
-            <ul>
-                {% for user in data %}
-                <li> Name : {{user['name']}} , Moyenne : {{average(user['notes'])}} </li> 
-                {% endfor %}
-            </ul>
-        </body>
+{% endblock %}
 
-        <!-- <script> alert("Tu es fou toi !")</script> -->
-        
-    </html>
+{% block content %}
+
+    <ul>
+        {% for user in data %}
+        <li> Name : {{user['name']}} , Moyenne : {{average(user['notes'])}} </li> 
+        {% endfor %}
+    </ul>
+
+    <nav>
+        <h1>Flaskr</h1><ul></ul>
+    </nav>
+
+{% endblock %}
